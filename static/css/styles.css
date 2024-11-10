@@ -1,0 +1,296 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Universal styles applied to all elements */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    text-decoration: none; /* Remove underline from links */
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline */
+    font-family: 'Poppins', sans-serif; /* Set font for all elements */
+}
+
+/* Set base font size for rem units */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Body styling */
+body {
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: black; /* Background color */
+    color: white; /* Text color */
+}
+
+/* Header styling */
+header {
+    margin-top: 20px; /* Space above header */
+    position: fixed; /* Fixed position at the top */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    padding: 1rem 9%; /* Padding for header content */
+    background-color: transparent; /* Transparent background */
+    filter: drop-shadow(10px); /* Drop shadow effect */
+    display: flex; /* Flexbox layout for header */
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Center items vertically */
+    z-index: 100; /* Ensure header is on top of other elements */
+}
+
+/* Logo styling */
+.logo {
+    font-size: 3rem; /* Font size of the logo */
+    color: #dc62d0; /* Logo color */
+    font-weight: 800; /* Bold weight */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.5s ease; /* Smooth transition for hover effects */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Navigation link styling */
+nav a {
+    font-size: 1.8rem; /* Font size for nav links */
+    color: white; /* Link color */
+    margin-left: 4rem; /* Space between links */
+    font-weight: 500; /* Medium font weight */
+    transition: 0.3s ease; /* Transition for hover effects */
+    border-bottom: 3px solid transparent; /* Initial border for underline effect */
+}
+
+/* Navigation link hover and active styles */
+nav a:hover,
+nav a.active {
+    color: #dc62d0; /* Color on hover or active */
+    border-bottom: 3px solid #dc62d0; /* Underline effect on hover or active */
+}
+
+/* Responsive navigation menu for mobile screens */
+@media(max-width: 995px) {
+    nav {
+        position: absolute; /* Position absolute for dropdown */
+        display: none; /* Hidden by default */
+        top: 0; /* Align to top */
+        right: 0; /* Align to right */
+        width: 40%; /* Width of the nav on mobile */
+        border-left: 3px solid #dc62d0; /* Left border */
+        border-bottom: 3px solid #dc62d0; /* Bottom border */
+        border-bottom-left-radius: 2rem; /* Rounded bottom-left corner */
+        padding: 1rem solid; /* Padding */
+        background-color: #161616; /* Background color */
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1); /* Top border */
+    }
+
+    /* Show nav menu when active */
+    nav.active {
+        display: block; /* Display the nav menu */
+    }
+
+    /* Styling for nav links in mobile view */
+    nav a {
+        display: block; /* Block display for mobile links */
+        font-size: 2rem; /* Larger font size */
+        margin: 3rem 0; /* Margin for spacing */
+    }
+
+    /* Active and hover styles for mobile nav links */
+    nav a:hover,
+    nav a.active {
+        padding: 1rem; /* Padding on hover */
+        border-radius: 0.5rem; /* Rounded corners on hover */
+        border-bottom: 0.5rem solid #dc62d0; /* Underline effect */
+    }
+}
+
+/* Section styling */
+section {
+    min-height: 100vh; /* Minimum height for sections */
+    padding: 5rem 9% 5rem; /* Padding for sections */
+}
+
+/* Home section layout */
+.home {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center content */
+    align-items: center; /* Align items vertically */
+    gap: 8rem; /* Space between elements */
+    background-color: black; /* Background color */
+}
+
+/* Main heading in the home section */
+.home .home-content h1 {
+    font-size: 6rem; /* Font size for main heading */
+    font-weight: 700; /* Font weight */
+    line-height: 1.3; /* Line height */
+}
+
+/* Highlighted span color in headings */
+span {
+    color: #dc62d0; /* Color for highlighted text */
+}
+
+/* Sub-heading in home section */
+.home-content h3 {
+    font-size: 4rem; /* Font size for sub-heading */
+    margin-bottom: 1rem; /* Margin below sub-heading */
+    font-weight: 700; /* Font weight */
+}
+
+/* Paragraph styling in the home section */
+.home-content p {
+    font-size: 1.6rem; /* Font size for paragraphs */
+}
+
+/* Profile image styling */
+.home-img {
+    border-radius: 50%; /* Make image container circular */
+}
+
+/* Image within the profile container */
+.home-img img {
+    position: relative; /* Positioning context for the image */
+    width: 25vw; /* Width relative to viewport */
+    border-radius: 50%; /* Make image circular */
+    box-shadow: 0 0 25px solid #dc62d0; /* Shadow effect */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.2s linear; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for profile image */
+.home-img img:hover {
+    font-size: 1.8rem; /* Increase font size on hover (may not affect image) */
+    font-weight: 500; /* Change font weight on hover (may not affect image) */
+}
+
+/* Social media icons styling */
+.social-icons a {
+    display: inline-flex; /* Inline flex for icon layout */
+    justify-content: center; /* Center icons */
+    align-items: center; /* Align icons vertically */
+    width: 4rem; /* Fixed width for icons */
+    height: 4rem; /* Fixed height for icons */
+    background-color: transparent; /* Transparent background */
+    border: 0.2rem solid #dc62d0; /* Border for icons */
+    font-size: 2rem; /* Font size for icons */
+    border-radius: 50%; /* Circular icons */
+    margin: 3rem 1.5rem 3rem 0; /* Margin for spacing */
+    transition: 0.3s ease; /* Transition for hover effects */
+    color: #dc62d0; /* Icon color */
+}
+
+/* Social icon hover effects */
+.social-icons a:hover {
+    color: black; /* Change icon color on hover */
+    transform: scale(1.3) translateY(-5px); /* Scale and move up on hover */
+    background-color: #dc62d0; /* Change background on hover */
+    box-shadow: 0 0 25px #dc62d0; /* Shadow effect on hover */
+}
+
+/* Button styling */
+.btn {
+    display: inline-block; /* Inline block for button layout */
+    padding: 1rem 2.8rem; /* Padding for button */
+    background-color: black; /* Background color for button */
+    border-radius: 4rem; /* Rounded corners for button */
+    font-size: 1.6rem; /* Font size for button */
+    color: #dc62d0; /* Text color for button */
+    letter-spacing: 0.3rem; /* Spacing between letters */
+    font-weight: 600; /* Font weight for button */
+    border: 2px solid #dc62d0; /* Border for button */
+    transition: 0.3s ease; /* Transition for hover effects */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Button hover effect */
+.btn:hover {
+    transform: scale3d(1.03); /* Slight scale effect on hover */
+    background-color: #dc62d0; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+    box-shadow: 0 0 25px #dc62d0; /* Shadow effect on hover */
+}
+
+/* Typing effect for dynamic text */
+.typing-text {
+    font-size: 34px; /* Font size for typing effect */
+    font-weight: 600; /* Font weight for typing effect */
+    min-width: 280px; /* Minimum width for typing effect */
+}
+
+/* Relative positioning for typing effect */
+.typing-text span {
+    position: relative; /* Positioning context for span */
+}
+
+/* Dynamic text animation for typing effect */
+.typing-text span::before {
+    content: "software Developer"; /* Initial text content */
+    color: #dc62d0; /* Color for typing text */
+    animation: words 20s infinite; /* Animation for changing words */
+}
+
+/* Cursor effect for typing text */
+.typing-text span::after {
+    content: ""; /* Empty content for cursor */
+    background-color: black; /* Background color for cursor */
+    position: absolute; /* Positioning context for cursor */
+    width: calc(100% + 8px); /* Width of the cursor */
+    height: 100%; /* Height of the cursor */
+    border-left: 3px solid black; /* Left border for cursor */
+    right: -8; /* Position cursor */
+    animation: cursor 0.6s infinite; /* Animation for cursor blinking */
+}
+
+/* Cursor blinking animation */
+@keyframes cursor {
+    to {
+        border-left: 3px solid #dc62d0; /* Blink effect */
+    }
+}
+
+/* Word changing animation */
+@keyframes words {
+    0%, 50% {
+        content: "an Engineer"; /* First word */
+    }
+    50%, 100% {
+        content: "a Developer"; /* Second word */
+    }
+}
+
+/* Media query for responsive adjustments */
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem; /* Reduce gap between items */
+    }
+}
+
+/* Additional responsive adjustments for smaller screens */
+@media(max-width: 995px) {
+    .home {
+        flex-direction: column; /* Stack items vertically */
+        margin: 5rem 4rem; /* Margin around home section */
+    }
+
+    /* Adjust sub-heading font size */
+    .home .home-content h3 {
+        font-size: 2.5rem; /* Smaller font size */
+    }
+
+    /* Adjust main heading font size */
+    .home-content h1 {
+        font-size: 5rem; /* Smaller font size */
+    }
+
+    /* Adjust image size in home section */
+    .home-img img {
+        width: 70vw; /* Width of the image on smaller screens */
+        margin-top: 4rem; /* Margin above image */
+    }
+}

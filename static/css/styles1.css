@@ -1,0 +1,56 @@
+/* styles1.css */
+
+body {
+    background-image: url('https://www.shutterstock.com/image-vector/sky-anime-sunset-background-cartoon-600nw-2473492387.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Style the main heading */
+h1 {
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+
+/* Style the sub-heading */
+h2 {
+    font-size: 1.5em;
+    margin: 0.2em 0 1em;
+}
+
+/* Customize the "About" link as a button */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Hover effect for the "About" button */
+a:hover {
+    background-color:linear-gradient(135deg, #d9afd9, #97d9e1);
+    border-top-right-radius: 20px;
+    transition: 2s;
+    transform: scale(1.1);
+}
+
+/* Adjust font-awesome icons if needed */
+i {
+    font-size: 1.5em;
+    margin-right: 8px;
+}
