@@ -17,3 +17,7 @@ A simple HTTP server implemented in Python using sockets. This project serves st
 
 ## Installation
 To run the HTTP server, you need to have Python installed on your machine. You can download Python from [python.org](https://www.python.org/downloads/).
+
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/KhagendraN/simple-http-server.git
