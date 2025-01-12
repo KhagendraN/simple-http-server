@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+</head>
+<body>
+    <h1>Available Music</h1>
+    <ul id="music-list">
+        <!-- List of music files will be populated here -->
+    </ul>
+
+    <script>
+        // Fetch list of available music files from the server
+        fetch('/get-music-list')
+        .then(response => response.json())
+        .then(data => {
+            let musicList = document.getElementById('music-list');
+            data.files.forEach(file => {
+                let li = document.createElement('li');
+                li.textContent = file;
+                li.onclick = function() {
+                    let audio = new Audio('/music/' + file);
+                    audio.play();
+                };
+                musicList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
